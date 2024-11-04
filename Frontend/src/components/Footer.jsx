@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer class="fixed-bottom fs-5 bg-warning text-white text-center p-2">
       <div class="container">
-        Developed by Aarush -{" "}
+        Developed by Aarush kumar -{" "}
         <a
           href="https://github.com/kraarush?tab=repositories"
           target="_blank "
