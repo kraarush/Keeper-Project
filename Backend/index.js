@@ -3,8 +3,7 @@ import cors from "cors";
 import pg from "pg";
 import env from 'dotenv';
 
-const port = 5000;
-const app = express();
+const port = process.env.PORT || 5000;const app = express();
 const { Pool } = pg;
 env.config();
 app.use(cors());
