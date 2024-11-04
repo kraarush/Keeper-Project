@@ -9,7 +9,7 @@ function App() {
   const [notes, setNotes] = useState([]);
 
   async function getData() {
-    const response = await axios.get("http://localhost:5000/getData");
+    const response = await axios.get("https://keeper-project-iyrl.onrender.com/getData");
     console.log(response.data);
     return response.data;
   }
