@@ -7,9 +7,7 @@ const port = process.env.PORT || 5000;
 const app = express();
 const { Pool } = pg;
 env.config();
-app.use(cors({
-  origin:process.env.FRONTEND_URL,
-}));
+app.use(cors());
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL, 
