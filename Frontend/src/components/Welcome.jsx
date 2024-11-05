@@ -13,6 +13,9 @@ const Welcome = () => {
     console.error("Login failed: ", response);
   };
 
+  const clientId = import.meta.env.VITE_API_GOOGLE_CLIENT_ID;
+  console.log(clientId);
+
   return (
     <div>
       <Header />
@@ -22,7 +25,7 @@ const Welcome = () => {
           Your one-stop solution for note keeping. Easily create, edit, and manage your notes in a beautiful and intuitive interface.
         </p>
         <GoogleLogin
-          clientId="YOUR_GOOGLE_CLIENT_ID"
+          clientId={clientId}
           buttonText="Login with Google"
           onSuccess={responseGoogle}
           onFailure={handleLoginFailure}

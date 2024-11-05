@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer class="fixed-bottom fs-5 bg-warning text-white text-center p-2">
+    <footer class="fixed-bottom bg-warning text-white text-center p-2">
       <div class="container">
         Developed by Aarush kumar -{" "}
         <a

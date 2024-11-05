@@ -16,13 +16,12 @@ body {
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures footer stays at the bottom */
 }
 
 header {
   background-color: #f5ba13;
   margin: auto -16px;
-  padding: 16px 32px;
+  padding: 16px 22px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -68,7 +67,7 @@ header h1 {
 }
 
 .note button {
-  align-self: flex-end; /* Place the button at the bottom */
+  align-self: flex-end; 
   color: #f5ba13;
   background-color: white;
   border: none;
@@ -113,75 +112,76 @@ form.create-note button {
   cursor: pointer;
   outline: none;
 }
-
 .welcome-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
-  padding: 20px; /* Add some padding around the container */
-  text-align: center; /* Center text */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
   margin-top: 20px;
 }
 
 .welcome-container h1 {
-  font-size: 2.5em; /* Adjusted font size for the main title */
-  color: #333; /* Darker color for better readability */
-  margin-bottom: 20px; /* Space below the title */
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .welcome-container p {
-  font-size: 1.2em; /* Font size for description */
-  color: #555; /* Softer color for description text */
-  max-width: 600px; /* Limit width for better readability */
-  margin: 0 auto 20px auto; /* Center and add margin */
+  font-size: 1.2em;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
 }
 
 .features {
-  margin-top: 30px; /* Space above the features section */
-  text-align: left; /* Left align features list */
-  max-width: 600px; /* Limit width for better readability */
-  margin: 20px auto; /* Center the features section */
+  margin-top: 30px;
+  text-align: left;
+  max-width: 600px;
+  margin: 20px auto;
 }
 
 .features h2 {
-  font-size: 2em; /* Font size for features heading */
-  margin-bottom: 10px; /* Space below the heading */
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
 .features ul {
-  list-style-type: disc; /* Use disc bullets for the list */
-  padding-left: 20px; /* Indent list items */
-  color: #333; /* Color for list items */
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #333;
 }
 
 .features li {
-  margin-bottom: 10px; /* Space between list items */
+  margin-bottom: 10px;
 }
 
 .welcome-container img {
-  margin-top: 20px; /* Space above the image */
-  max-width: 100%; /* Responsive image */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Rounded corners for the image */
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
+
 .google-login-button {
-  background-color: #f5ba13; /* Matches your app theme color */
-  color: #fff; /* White text color */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Slightly rounded corners */
-  padding: 10px 20px; /* Padding for better touch target */
-  font-size: 1.1em; /* Font size */
-  cursor: pointer; /* Pointer cursor on hover */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  background-color: #f5ba13;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  margin: 20px;
 }
 
 .google-login-button:hover {
-  background-color: #e0a412; /* Darker shade on hover */
+  background-color: #e0a412;
 }
 
 .google-login-button:disabled {
-  background-color: #ccc; /* Gray color when disabled */
-  cursor: not-allowed; /* Change cursor to not-allowed */
+  background-color: #ccc;
+  cursor: not-allowed;
 }
