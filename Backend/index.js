@@ -16,9 +16,13 @@ const pool = new Pool({
   }
 });
 
+app.get('/login', (req,res) => {
+  
+})
+
 app.get("/getData", async (req, res) => {
   try {
-    const result = await pool.query("SELECT * FROM dummy"); 
+    const result = await pool.query("SELECT * FROM data"); 
     res.send(result.rows);
   } catch (err) {
     console.log(err);
