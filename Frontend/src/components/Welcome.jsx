@@ -7,19 +7,15 @@ import Footer from './Footer';
 const Welcome = () => {
   const responseGoogle = (response) => {
     console.log("Logging in with Google...", response);
-    // Handle successful login here
-    // For example, save user data or access token
   };
 
   const handleLoginFailure = (response) => {
     console.error("Login failed: ", response);
   };
 
-  // Fetch the client ID from the environment variables
   const clientId = import.meta.env.VITE_API_GOOGLE_CLIENT_ID;
 
   return (
-    // Wrap your application with GoogleOAuthProvider to provide the client ID context
     <GoogleOAuthProvider clientId={clientId}>
       <div>
         <Header />
