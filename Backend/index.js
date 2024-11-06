@@ -17,9 +17,10 @@ const pool = new Pool({
 });
 
 app.post('/login', (req,res) => {
-  const response = req.body;
+  const response = req.body;                                     
+  console.log('abracadabra');
   console.log(response);
-  res.send(response);
+  res.send('Succesfully logged In');
 })
 
 app.get("/getData", async (req, res) => {
@@ -31,7 +32,6 @@ app.get("/getData", async (req, res) => {
     res.status(500).send("Error retrieving data from database");
   }
 });
-
 
 app.listen(port, () => {
   console.log("Server is live on " + port);

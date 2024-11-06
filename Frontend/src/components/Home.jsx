@@ -6,21 +6,8 @@ import CreateArea from "./CreateArea";
 import axios from "axios";
 
 function Home() {
-  const [notes, setNotes] = useState([]);
-
-  async function getData() {
-    const response = await axios.get("https://keeper-project-iyrl.onrender.com/getData");
-    console.log(response.data);
-    return response.data;
-  }
-
-  useEffect(() => {
-    async function fetchNotes() {
-      const data = await getData();
-      setNotes(data);
-    }
-    fetchNotes();
-  }, []);
+  const backendURL = import.meta.env.VITE_API_BACKEND_URL;
+  const [notes, setNotes] = useState([]);  
 
   function addNote(newNote) {
     setNotes((prevNotes) => {
