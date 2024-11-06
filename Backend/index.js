@@ -16,8 +16,10 @@ const pool = new Pool({
   }
 });
 
-app.get('/login', (req,res) => {
-  
+app.post('/login', (req,res) => {
+  const response = req.body;
+  console.log(response);
+  res.send(response);
 })
 
 app.get("/getData", async (req, res) => {
