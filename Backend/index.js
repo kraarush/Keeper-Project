@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import pg from "pg";
 import env from "dotenv";
+import {jwtDecode} from "jwt-decode";
 
 const port = process.env.PORT || 5000;
 const app = express();
@@ -24,7 +25,11 @@ const pool = new Pool({
 });
 
 app.post("/auth/login", async (req, res) => {
-  const { email, name } = req.body;
+  const response = req.body;
+  const { credential } = response;
+  console.log('here ' + credential);
+  const decodedToken = jwtDecode(credential);
+  const { name, email } = decodedToken;
 
   try {
     const existingUser = await pool.query(
@@ -53,10 +58,10 @@ app.post("/auth/login", async (req, res) => {
 app.post("/insertNote", async (req, res) => {
   const { title, content, userId } = req.body;
 
-  console.log(title)
+  console.log(title);
   console.log(content);
   console.log(userId);
-  
+
   try {
     const result = await pool.query(
       "INSERT INTO data (title, content, user_id) VALUES ($1, $2, $3) RETURNING *",
@@ -71,7 +76,7 @@ app.post("/insertNote", async (req, res) => {
 
 app.delete("/deleteNote/:id", async (req, res) => {
   const { id } = req.params;
-  const { userId } = req.body; 
+  const { userId } = req.body;
 
   try {
     await pool.query("DELETE FROM data WHERE user_id = $1 AND id = $2", [

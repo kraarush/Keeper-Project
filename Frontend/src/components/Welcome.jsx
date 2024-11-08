@@ -4,21 +4,17 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { jwtDecode } from "jwt-decode";
 
 const Welcome = () => {
   const backendURL = import.meta.env.VITE_API_BACKEND_URL;
   const navigate = useNavigate();
 
   const responseGoogle = async (response) => {
-    const { credential } = response;
-    const decodedToken = jwtDecode(credential);
-    const { name, email } = decodedToken;
-
+    
+    const {credential} = response;
     try {
       const result = await axios.post(`${backendURL}/auth/login`, {
-        name,
-        email,
+        credential,
       });
 
       if (result.data.userId) {
