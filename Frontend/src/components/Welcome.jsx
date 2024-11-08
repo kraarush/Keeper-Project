@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -8,8 +8,6 @@ import { jwtDecode } from "jwt-decode";
 
 const Welcome = () => {
   const backendURL = import.meta.env.VITE_API_BACKEND_TEST_URL;
-  console.log(backendURL);
-  const [result, setResult] = useState("not yet");
   const navigate = useNavigate();
 
   const responseGoogle = async (response) => {
@@ -23,8 +21,9 @@ const Welcome = () => {
         email,
       });
 
-      console.log(result);
-      navigate("/home");
+      if (result.data.userId) {
+        navigate("/home", { state: { userId: result.data.userId } });
+      }
     } catch (error) {
       console.error("Error during login:", error);
     }
