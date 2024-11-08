@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom";
 
 function Home() {
 
-  const backendURL = import.meta.env.VITE_API_BACKEND_TEST_URL;
+  const backendURL = import.meta.env.VITE_API_BACKEND_URL;
   const [notes, setNotes] = useState([]);
   const [userName, setUserName] = useState('');
   const [loading, setLoading] = useState(false);

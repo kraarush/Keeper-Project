@@ -7,7 +7,7 @@ import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 
 const Welcome = () => {
-  const backendURL = import.meta.env.VITE_API_BACKEND_TEST_URL;
+  const backendURL = import.meta.env.VITE_API_BACKEND_URL;
   const navigate = useNavigate();
 
   const responseGoogle = async (response) => {
