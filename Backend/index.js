@@ -95,7 +95,7 @@ app.get("/getData/", async (req, res) => {
 
   try {
     const result = await pool.query(
-      "SELECT data.id, data.title, data.content, users.name FROM data JOIN users ON data.user_id = $1",
+      "SELECT data.*, users.name FROM data JOIN users ON data.user_id = users.id WHERE data.user_id = $1",
       [userId]
     );
     if (result.rows.length === 0) {
