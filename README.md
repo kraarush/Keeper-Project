@@ -1,8 +1,10 @@
-🌐 Live Demo: Keeper App 🚀
+# 📝 Keeper - Notes Keeping Web Application
+
+🌐 **Live Demo:** [Keeper App](https://mynoteskeeper.netlify.app/) 🚀
 
 Keeper is a simple and intuitive notes-keeping web application that allows users to log in using Google authentication and save their notes securely. ✨
 
-⚠️ Note: Since the application is hosted on free cloud providers, the backend server may take a few minutes to start due to cold starts on Render. Please be patient while the app loads. ⏳
+⚠️ **Note:** Since the application is hosted on free cloud providers, the backend server may take a few minutes to start due to cold starts on Render. Please be patient while the app loads. ⏳
 
 ## 🚀 Features
 - 🔐 User authentication via Google Login
@@ -53,6 +55,9 @@ npm start
 
 ## 🤝 Contributing
 Contributions are welcome! Feel free to fork the repository and submit pull requests. 🚀
+
+## 📜 License
+This project is licensed under the MIT License. 📄
 
 ## 📧 Contact
 For any issues or queries, feel free to reach out via GitHub Issues. 🛠️
